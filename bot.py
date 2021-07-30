@@ -29,9 +29,9 @@ class Bot(Client):
                 link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
                 self.invitelink = link
             except:
-                self.LOGGER(__name__).warning("Bot can't Export Invite link from Force Sub Channel!")
+                self.LOGGER(__name__).warning("BOT BELUM DIJADIKAN ADMIN DICHANNEL WAJIB GABUNG")
                 self.LOGGER(__name__).warning("COBA CEK UDAH DOJADIIN ADMIN LOM BOTNYA?")
-                self.LOGGER(__name__).info("\nBot BERHENTI UNTUK BANTUAN https://t.me/K4N3N")
+                self.LOGGER(__name__).info("\nBOT BERHENTI BEKERJA/TIDUR...")
                 sys.exit()
         try:
             db_channel = await self.get_chat(CHANNEL_ID)
@@ -40,14 +40,14 @@ class Bot(Client):
             await test.delete()
         except Exception as e:
             self.LOGGER(__name__).warning(e)
-            self.LOGGER(__name__).warning("Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value")
-            self.LOGGER(__name__).info("\nBot BERHENTI UNTUK BANTUAN https://t.me/K4N3N")
+            self.LOGGER(__name__).warning("PASTIKAN BOT SUDAH MENJADI ADMIN DIVHANNELS.")
+            self.LOGGER(__name__).info("\nBOT BERHENTI BEKERJA/TIDUR ...")
             sys.exit()
 
         self.set_parse_mode("html")
-        self.LOGGER(__name__).info(f"Bot Running..!\n\nCreated by @K4N3N \nhttps://t.me/Suryapro69")
+        self.LOGGER(__name__).info(f"BOT BERJALAN!\n\nPEMBUAT WIBU AKUT")
         self.username = usr_bot_me.username
 
     async def stop(self, *args):
         await super().stop()
-        self.LOGGER(__name__).info("Bot BERHENTI.")
+        self.LOGGER(__name__).info("BOT BERHENTI BEKERJA ...")
