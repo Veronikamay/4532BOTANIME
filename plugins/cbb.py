@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"📌ℂℍ𝔸ℕℕ𝔼𝕃𝕊 ℙ𝔸ℝ𝕋ℕ𝔼ℝ𝕊📌\n<b>§ 01 : <a href='https://t.me/pikapikacuk44'>Channel</a>\n§ 02 : <a href='https://t.me/Suryapro69'>Channel</a>\n§ 03 : <a href='https://t.me/gudangsyahwat76'>Channel</a>\n§ Twitter : <a href='https://twitter.com/BFROOMS?s=08'>@BFROOMS</a>\n§ Facebook : - \n§ Owner : @K4N3N</b>",
+            text = f"𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝙎𝙄 𝘽𝙊𝙏 𝘼𝘿𝘼 𝘿𝙄 𝘽𝙄𝙊 𝘽𝙊𝙏",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
