@@ -94,11 +94,11 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>Akses Bot ditolak!!\n\nKamu Harus Join Channels/Groups Kami Sebelum Menggunakan Bot ini. Silahkan Klik Tombol Gabung Dibawah Untuk Menggunakan Bot ini.Bila Sudah Kembali ke chat room bot </b>"
+    text = "<b>Akses Bot ditolak!!\nKamu Harus Join Channels/Groups Kami Sebelum Menggunakan Bot ini.\n1.Silahkan Klik Tombol Gabung Dibawah Untuk Menggunakan Bot ini.\n2.Bila Sudah, Kembali ke bot.\n3.lalu ⇉  </b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>➡️<a href='https://t.me/{client.username}?start={argument}'>lalu ⇉ 𝐊𝐋𝐈𝐊 𝐓𝐄𝐊𝐒 𝐈𝐍𝐈</a></b>"
+        text = text + f" <b>➡️<a href='https://t.me/{client.username}?start={argument}'>𝐊𝐋𝐈𝐊 𝐓𝐄𝐊𝐒 𝐈𝐍𝐈</a></b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("𝐆𝐀𝐁𝐔𝐍𝐆", url = client.invitelink)]])
