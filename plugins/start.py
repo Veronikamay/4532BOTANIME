@@ -40,11 +40,11 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("TUNGGU...")
+        temp_msg = await message.reply("𝐓𝐔𝐍𝐆𝐆𝐔 𝐒𝐄𝐁𝐄𝐍𝐓𝐀𝐑 ...")
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("NYALAHAN..!")
+            await message.reply_text("𝐓𝐄𝐑𝐉𝐀𝐃𝐈 𝐊𝐄𝐒𝐀𝐋𝐀𝐇𝐀𝐍 ...")
             return
         await temp_msg.delete()
 
@@ -73,8 +73,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("𝕀ℕ𝔽𝕆 𝔹𝕆𝕋", callback_data = "about"),
-                    InlineKeyboardButton("𝕄𝔼ℕ𝕌", callback_data = "close")
+                    InlineKeyboardButton("𝐈𝐍𝐅𝐎 𝐁𝐎𝐓", callback_data = "about"),
+                    InlineKeyboardButton("𝐊𝐄𝐌𝐁𝐀𝐋𝐈", callback_data = "close")
                 ]
             ]
         )
@@ -98,10 +98,10 @@ async def not_joined(client: Client, message: Message):
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>➡️<a href='https://t.me/{client.username}?start={argument}'>Ulangi</a></b>"
+        text = text + f" <b>➡️<a href='https://t.me/{client.username}?start={argument}'>𝐊𝐋𝐈𝐊 𝐓𝐄𝐊𝐒 𝐈𝐍𝐈</a></b>"
     except ValueError:
         pass
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel", url = client.invitelink)]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("𝐆𝐀𝐁𝐔𝐍𝐆", url = client.invitelink)]])
     await message.reply(
         text = text,
         reply_markup = reply_markup,
