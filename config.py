@@ -3,7 +3,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "1946788850:AAGnsbK_OKsk13uuOMi8fTXu6pxhYHYifDA")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "1936650824:AAHJwl9fHOnmSKCihx6xUbA7XJHZX-w3bK0")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", "7541940"))
@@ -12,13 +12,13 @@ APP_ID = int(os.environ.get("APP_ID", "7541940"))
 API_HASH = os.environ.get("API_HASH", "c3844ac69bde05d7ff6c634d05f78e54")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001435854455"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001578052960"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "1862482411"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "1693592900"))
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001551633328"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001563414988"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -26,7 +26,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "BOT PENAMPIL FILE")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "1900012138 1693592900 1384738215 1811423393 1884429569").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Daftar Admin Anda tidak berisi bilangan bulat yang valid.")
